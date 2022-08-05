@@ -18,7 +18,7 @@ FROM node
 
 RUN pnpm i -g regctl
 RUN curl -fsSL https://get.docker.com | sh -
-RUN curl -o entry.sh https://raw.githubusercontent.com/docker-library/docker/master/docker-entrypoint.sh && chmod +x entry.sh
+RUN curl -o /bin/entry.sh https://raw.githubusercontent.com/docker-library/docker/master/docker-entrypoint.sh && chmod +x /bin/entry.sh
 
 ENTRYPOINT ["entry.sh"]
 CMD ["sh"]
