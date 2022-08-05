@@ -17,3 +17,4 @@ RUN npm i -g pnpm && rm -rf /root/.npm
 FROM node
 
 RUN pnpm i -g regctl
+RUN curl -fsSL https://get.docker.com | sh -
